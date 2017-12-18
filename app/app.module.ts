@@ -7,6 +7,7 @@ import { TodoFormComponent } from './todo-form/todo-form.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { TodoItemComponent } from './todo-item/todo-item.component';
 import { TodoService } from './shared/todo.service';
+import { ConverterComponent } from './converter/converter.component';
 
 @NgModule({
   imports: [
@@ -17,7 +18,8 @@ import { TodoService } from './shared/todo.service';
     AppComponent,
     TodoFormComponent,
     TodoListComponent,
-    TodoItemComponent
+    TodoItemComponent,
+    ConverterComponent
   ],
   providers: [ TodoService ],
   bootstrap: [

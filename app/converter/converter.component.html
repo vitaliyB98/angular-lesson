@@ -1,0 +1,14 @@
+<div class="converter-pane">
+  <form class="converter-form" #converterForm="ngForm">
+      <input type="number" name="convert_from" [(ngModel)]="convert_from" (input)="convertFrom(convert_from, current_convert)" [placeholder]="convert_option.from_title ? convert_option.from_title : 'Km'" required>
+      <select name="current_convert" [(ngModel)]="current_convert" (click)="convertFrom(convert_from, current_convert)">
+        <option *ngFor="let convert_option of convert_options" value="{{ convert_option.id }}">
+          {{ convert_option.from_title }} to {{ convert_option.to_title }}
+        </option>
+      </select>
+  </form>
+  <br>
+  <div class="result" *ngIf="convert_option.to_title">
+    {{ convert_option.to_title }} = {{ convert_to }}
+  </div>
+</div>
